@@ -24,10 +24,6 @@
 };
 
 / {
-    /* 命令文を追加：右手単体動作時は右手用のマトリックス・トランスフォームを強制適用 */
-    chosen {
-        zmk,matrix-transform = &right_transform;
-    };
 
     keymap {
         compatible = "zmk,keymap";
