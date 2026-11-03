@@ -24,9 +24,30 @@
 };
 
 / {
-    /* ======= ZMK Studio用の物理レイアウト指定をここに追加 ======= */
+    /* ======= 1. ZMK Studio用の物理レイアウトを明示的に選択 ======= */
     chosen {
         zmk,physical-layout = &keyball61_layout;
+    };
+
+    /* ======= 2. 存在しなかった「物理レイアウト」の定義をここに追加 ======= */
+    keyball61_layout: keyball61_layout {
+        compatible = "zmk,physical-layout";
+        display-name = "Default Layout";
+        transform = <&default_transform>; // 既存のmatrix-transformを参照
+        // Keyball61の全61キー分のダミー座標を定義（Studioの画面表示用）
+        kscan = <&kscan0>;
+        keys
+            = <&layout_point 0 0> , <&layout_point 0 1> , <&layout_point 0 2> , <&layout_point 0 3> , <&layout_point 0 4> , <&layout_point 0 5>
+            , <&layout_point 1 0> , <&layout_point 1 1> , <&layout_point 1 2> , <&layout_point 1 3> , <&layout_point 1 4> , <&layout_point 1 5>
+            , <&layout_point 2 0> , <&layout_point 2 1> , <&layout_point 2 2> , <&layout_point 2 3> , <&layout_point 2 4> , <&layout_point 2 5>
+            , <&layout_point 3 0> , <&layout_point 3 1> , <&layout_point 3 2> , <&layout_point 3 3> , <&layout_point 3 4> , <&layout_point 3 5>
+            , <&layout_point 4 0> , <&layout_point 4 1> , <&layout_point 4 2> , <&layout_point 4 3> , <&layout_point 4 4> , <&layout_point 4 5>
+            , <&layout_point 5 0> , <&layout_point 5 1> , <&layout_point 5 2> , <&layout_point 5 3> , <&layout_point 5 4> , <&layout_point 5 5>
+            , <&layout_point 6 0> , <&layout_point 6 1> , <&layout_point 6 2> , <&layout_point 6 3> , <&layout_point 6 4> , <&layout_point 6 5>
+            , <&layout_point 7 0> , <&layout_point 7 1> , <&layout_point 7 2> , <&layout_point 7 3> , <&layout_point 7 4> , <&layout_point 7 5>
+            , <&layout_point 8 0> , <&layout_point 8 1> , <&layout_point 8 2> , <&layout_point 8 3> , <&layout_point 8 4> , <&layout_point 8 5>
+            , <&layout_point 9 0> , <&layout_point 9 1> , <&layout_point 9 2> , <&layout_point 9 3> , <&layout_point 9 4> , <&layout_point 9 5>
+            , <&layout_point 10 0>;
     };
 
     keymap {
