@@ -6,8 +6,15 @@
  
 #include "keyball61.dtsi"
 
+/* 修正点：右の列をずらす(col-offset)命令を削除し、右手単体用のトランスフォーム(立体配置)に上書き指定します */
+/ {
+    chosen {
+        zmk,matrix-transform = &default_transform;
+    };
+};
+
 &default_transform {
-    col-offset = <7>;
+    col-offset = <0>; /* 0列目(一番左)からスタートさせることで、左4列がすべて正常に認識されるようになります */
 };
 
 &kscan0 {
