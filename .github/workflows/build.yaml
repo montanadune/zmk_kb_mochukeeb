@@ -1,7 +1,5 @@
 include:
-  # （中略：左手の設定はそのまま）
-  
-  # 右手側の設定を以下のようにシンプルにする
   - board: nice_nano_v2
     shield: keyball61_right
-    # ↓ この下にあった snippet や cmake-args: -DCONFIG_ZMK_STUDIO=y を削除する
+    snippet: studio-rpc-usb-uart
+    cmake-args: -DCONFIG_ZMK_STUDIO=y
