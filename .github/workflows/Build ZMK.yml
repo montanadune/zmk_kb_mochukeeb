@@ -1,0 +1,8 @@
+name: Build ZMK Firmware
+on: [push, pull_request, workflow_dispatch]
+
+include:
+  - board: nice_nano_v2
+    shield: keyball61_left
+  - board: nice_nano_v2
+    shield: keyball61_right_peripheral  # ←これだと単体で左4列が動きません
