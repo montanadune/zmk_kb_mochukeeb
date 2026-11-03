@@ -24,6 +24,10 @@
 };
 
 / {
+    /* ======= ZMK Studio用の物理レイアウト指定をここに追加 ======= */
+    chosen {
+        zmk,physical-layout = &keyball61_layout;
+    };
 
     keymap {
         compatible = "zmk,keymap";
