@@ -1,7 +1,9 @@
+# build.yaml の例
 include:
   - board: nice_nano_v2
-    shield: keyball61_left
-    cmake-args: -DCONFIG_ZMK_STUDIO=n
+    shield: mochukeeb_left
+    snippet: studio-rpc-usb-uart      # ZMK Studioを使う場合
+    cmake-args: -DCONFIG_ZMK_STUDIO=y # ZMK Studioを使う場合
   - board: nice_nano_v2
-    shield: keyball61_right
-    cmake-args: -DCONFIG_ZMK_STUDIO=n
+    shield: mochukeeb_right
+    # 右手側（周辺側）にはこれらを指定しない
