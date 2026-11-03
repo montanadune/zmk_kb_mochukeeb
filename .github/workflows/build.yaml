@@ -1,5 +1,7 @@
 include:
   - board: nice_nano_v2
     shield: keyball61_left
+    cmake-args: -DCONFIG_ZMK_STUDIO=n
   - board: nice_nano_v2
     shield: keyball61_right
+    cmake-args: -DCONFIG_ZMK_STUDIO=n
